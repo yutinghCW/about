@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="770px" height="450px" viewBox="0 0 770 450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>2-4-1</title>
+    <g id="2-4-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#FAFAFA" x="0" y="0" width="770" height="450"></rect>
+        <g id="Group-Copy" transform="translate(53.000000, 40.000000)">
+            <text id="天下" font-family="PingFangTC-Light, PingFang TC" font-size="18" font-weight="300" line-spacing="27" fill="#D60C18">
+                <tspan x="19" y="81">天下</tspan>
+            </text>
+            <text id="商周" font-family="PingFangTC-Light, PingFang TC" font-size="18" font-weight="300" line-spacing="27" fill="#000000">
+                <tspan x="19" y="140">商周</tspan>
+            </text>
+            <text id="遠見" font-family="PingFangTC-Light, PingFang TC" font-size="18" font-weight="300" line-spacing="27" fill="#000000">
+                <tspan x="19" y="202">遠見</tspan>
+            </text>
+            <text id="今周刊" font-family="PingFangTC-Light, PingFang TC" font-size="18" font-weight="300" line-spacing="27" fill="#000000">
+                <tspan x="0" y="242">今周刊</tspan>
+            </text>
+            <text id="月份" font-family="PingFangTC-Light, PingFang TC" font-size="18" font-weight="300" line-spacing="27" fill="#000000">
+                <tspan x="19" y="335">月份</tspan>
+            </text>
+            <text id="資料來源：comScore" font-family="PingFangTC-Light, PingFang TC" font-size="14" font-weight="300" line-spacing="18" fill="#000000">
+                <tspan x="257" y="374">資料來源：comScore</tspan>
+            </text>
+            <text id="2017." font-family="PingFangTC-Light, PingFang TC" font-size="16" font-weight="300" line-spacing="27" fill="#000000">
+                <tspan x="66" y="308">2017.</tspan>
+            </text>
+            <text id="2018." font-family="PingFangTC-Light, PingFang TC" font-size="16" font-weight="300" line-spacing="27" fill="#000000">
+                <tspan x="436" y="308">2018.</tspan>
+            </text>
+            <text id="02" font-family="PingFangTC-Light, PingFang TC" font-size="16" font-weight="300" line-spacing="27" fill="#000000">
+                <tspan x="77" y="334">02</tspan>
+            </text>
+            <text id="02-copy-6" font-family="PingFangTC-Light, PingFang TC" font-size="16" font-weight="300" line-spacing="27" fill="#000000">
+                <tspan x="448" y="334">02</tspan>
+            </text>
+            <text id="04" font-family="PingFangTC-Light, PingFang TC" font-size="16" font-weight="300" line-spacing="27" fill="#000000">
+                <tspan x="152" y="334">04</tspan>
+            </text>
+            <text id="04" font-family="PingFangTC-Light, PingFang TC" font-size="16" font-weight="300" line-spacing="27" fill="#000000">
+                <tspan x="516" y="334">04</tspan>
+            </text>
+            <text id="06" font-family="PingFangTC-Light, PingFang TC" font-size="16" font-weight="300" line-spacing="27" fill="#000000">
+                <tspan x="213" y="334">06</tspan>
+            </text>
+            <text id="06" font-family="PingFangTC-Light, PingFang TC" font-size="16" font-weight="300" line-spacing="27" fill="#000000">
+                <tspan x="576" y="334">06</tspan>
+            </text>
+            <text id="08" font-family="PingFangTC-Light, PingFang TC" font-size="16" font-weight="300" line-spacing="27" fill="#000000">
+                <tspan x="273" y="334">08</tspan>
+            </text>
+            <text id="08" font-family="PingFangTC-Light, PingFang TC" font-size="16" font-weight="300" line-spacing="27" fill="#000000">
+                <tspan x="635" y="334">08</tspan>
+            </text>
+            <text id="10" font-family="PingFangTC-Light, PingFang TC" font-size="16" font-weight="300" line-spacing="27" fill="#000000">
+                <tspan x="334" y="334">10</tspan>
+            </text>
+            <text id="12" font-family="PingFangTC-Light, PingFang TC" font-size="16" font-weight="300" line-spacing="27" fill="#000000">
+                <tspan x="395" y="334">12</tspan>
+            </text>
+            <line x1="66" y1="177.5" x2="660" y2="177.5" id="Line-Copy" stroke="#EEEEEE" stroke-linecap="square" stroke-dasharray="4"></line>
+            <line x1="66" y1="55.5" x2="660" y2="55.5" id="Line-Copy-2" stroke="#EEEEEE" stroke-linecap="square" stroke-dasharray="4"></line>
+            <polyline id="Path-2" stroke="#D3D5D7" stroke-width="2" points="83 135.596503 134.292149 132.63637 166.177788 105.980115 192.638858 53.3018002 224.263797 99.5160152 280.367816 37.1557737 316.351127 24 345.785181 50.0588736 378.367692 53.3018002 405.645957 94.7687588 440.711804 102.546428 471.606448 119.264736 496.225905 147.972501 530.355905 253.432878 592.873817 256.732698 617.521683 264 647 260.62488"></polyline>
+            <polyline id="Path-3" stroke="#D3D5D7" stroke-width="2" points="83 193.870796 100.866282 216.110538 131.013168 219.974631 193.441025 193.870796 224.666679 206.922714 256.748313 193.870796 286.704655 225 314.367295 206.922714 375.681683 180.82406 424.175561 202.91203 465.899693 202.91203 494.83157 149.050148 528.756555 170.811213 559.002004 163.615978 589.471092 141 618.640153 163.615978 648 145.27599"></polyline>
+            <polyline id="Path-4" stroke="#D3D5D7" stroke-width="2" points="83 232.135564 135.568875 250 164.547764 241.067782 197.227944 246.467819 228.533264 243.708579 254.082749 235.488378 285.939736 243.708579 318.936718 241.067782 348.365325 216.672205 375.412689 205.356356 406.712773 226.033327 437.464681 184.008674 467.308784 216.672205 498.172423 197.237251 530.764383 191.671708 559.002004 164.613274 587.716952 152 619.298106 174.270888 648 166.901293"></polyline>
+            <polyline id="Path" stroke="#D60C18" stroke-width="2" points="83 78.9638192 106.050465 83 135.671376 75.0071131 164.114941 10.4367348 195.758619 0 228.032107 45.3318172 255.173409 38.1005594 314.812888 50.4869918 347.388394 33.4370627 401.064556 50.4869918 437.269512 50.4869918 468.617997 68.7997922 497.746178 35.0596699 556.952172 20.2739587 618.691505 56.5794088 647 56.5794088"></polyline>
+            <line x1="66" y1="290.5" x2="660" y2="290.5" id="Line" stroke="#000000" stroke-linecap="square"></line>
+        </g>
+    </g>
+</svg>
