@@ -1,0 +1,196 @@
+@import 'normalize-version';
+@import 'normalize/html5';
+@import 'normalize/base';
+@import 'normalize/links';
+// @import 'normalize/typography';
+@import 'normalize/embeds';
+@import 'normalize/groups';
+@import 'normalize/forms';
+@import 'normalize/tables';
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+TC:300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+ul,
+ol {
+    padding-left: 1.15em;
+}
+
+.upper-latin {
+    list-style-type: upper-alpha;
+}
+
+.decimal {
+    list-style-type: decimal;
+}
+
+.disc {
+    list-style-type: disc;
+}
+
+.number__brackets li {
+    position: relative;
+    padding-left: 2em;
+    line-height: 1.5;
+    span {
+        position: absolute;
+        left: 0;
+    }
+}
+
+.list-reset {
+    @extend %list-reset;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.font-weight-500 {
+    font-weight: 500;
+}
+
+.flex {
+    @include breakpoint(768px) {
+        &-md {
+            display: flex;
+        }
+    }
+    @include breakpoint(1024px) {
+        &-lg {
+            display: flex;
+        }
+    }
+    @include breakpoint(1280px) {
+        &-xl {
+            display: flex;
+        }
+    }
+}
+
+html {
+    min-height: 100%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+}
+
+.sr-only {
+    position: absolute!important;
+    padding: 0!important;
+    margin: 0!important;
+    width: 0!important;
+    height: 0!important;
+    font-size: 0!important;
+}
+
+*,
+*::before,
+*::after {
+    @include box-sizing(border-box);
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+    height: 100%;
+    // padding-bottom: 280px;
+    // @include breakpoint(768px) {
+    //     padding-bottom: 190px;
+    // }
+    @include breakpoint(1024px) {
+        font-family: Roboto, 'Noto Sans TC', sans-serif;
+        font-weight: 300;
+    }
+    // &.footer--downward {
+    //     padding-bottom: 160px;
+    //     @include breakpoint(768px) {
+    //         padding-bottom: 228px;
+    //     }
+    //     @include breakpoint(872px) {
+    //         padding-bottom: 209px;
+    //     }
+    //     @include breakpoint(874px) {
+    //         padding-bottom: 190px;
+    //     }
+    // }
+    // &.footer--normal {
+    //     padding-bottom: 280px;
+    //     @include breakpoint(768px) {
+    //         padding-bottom: 228px;
+    //     }
+    //     @include breakpoint(872px) {
+    //         padding-bottom: 209px;
+    //     }
+    //     @include breakpoint(874px) {
+    //         padding-bottom: 190px;
+    //     }
+    // }
+    &.opened {
+        overflow: hidden;
+    }
+}
+
+.serif {
+    font-family: 'Roboto Slab', 'Noto Serif TC', serif;
+}
+
+a,
+button {
+    text-decoration: none;
+    @include breakpoint(1024px) {
+        @include transition(color .2s,
+        border .2s,
+        background .2s);
+    }
+}
+
+img {
+    display: block;
+}
+
+.clearfix,
+.clearfix::before,
+.clearfix::after {
+    display: table;
+    clear: both;
+}
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.text-ellipsis {
+    @include ellipsis;
+}
+
+.desktop {
+    @include breakpoint(max-width 1023px) {
+        display: none;
+    }
+}
+
+.mobile {
+    @include breakpoint(1024px) {
+        display: none;
+    }
+}

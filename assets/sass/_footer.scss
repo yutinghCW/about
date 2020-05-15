@@ -1,0 +1,124 @@
+footer {
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: $gray-100;
+    z-index: 1;
+    .container {
+        @include breakpoint(1200px) {
+            width: 1150px;
+        }
+    }
+    a {
+        color: $text;
+        &:hover {
+            color: $primary;
+        }
+    }
+    .channel__group {
+        @include breakpoint(1024px) {
+            display: flex;
+        }
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .channel__item {
+        @include breakpoint(max-width 1023px) {
+            border-bottom: 1px solid $gray-200;
+        }
+        .channel__title {
+            position: relative;
+            i.icon {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                @include translateY(-50%);
+                @include transition(transform 0.2s);
+                @include breakpoint(1024px) {
+                    display: none;
+                }
+                &.active {
+                    @include transform(translateY(-50%) rotate(180deg));
+                }
+            }
+        }
+        .channel__option {
+            @include breakpoint(1024px) {
+                display: block !important;
+            }
+            @include breakpoint(max-width 1023px) {
+                display: none;
+            }
+            ul {
+                @include list(0, 0, none);
+                font-size: 0.875rem;
+                a {
+                    display: block;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                }
+            }
+        }
+        &:first-child {
+            .channel__option {
+                ul {
+                    @include breakpoint(1024px) {
+                        column-count: 2;
+                        column-gap: 1em;
+                    }
+                }
+            }
+        }
+    }
+    .cwgroup__copyright {
+        @include breakpoint(max-width 1023px) {
+            text-align: center;
+        }
+        ul.sns {
+            @include list(0, 0, none);
+            font-size: 0;
+            li {
+                display: inline-block;
+                font-size: 1.5rem;
+                vertical-align: middle;
+                +li {
+                    margin-left: 20px;
+                }
+                a {
+                    display: block;
+                    i.icon {
+                        display: block;
+                    }
+                    &.facebook:hover {
+                        color: $facebook;
+                    }
+                    &.line:hover {
+                        color: $line;
+                    }
+                    &.instagram:hover {
+                        color: $instagram;
+                    }
+                    &.rss:hover {
+                        color: $rss;
+                    }
+                }
+            }
+        }
+        .contact,
+        .copyright {
+            span {
+                display: block;
+                font-size: 0.75rem;
+                @include breakpoint(1024px) {
+                    display: inline-block;
+                    &:first-child {
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

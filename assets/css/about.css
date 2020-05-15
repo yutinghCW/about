@@ -2317,6 +2317,64 @@ a:focus {
   border-color: #D3D5D7;
 }
 
+body.message__open {
+  overflow: hidden;
+}
+
+.message p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.message p + p {
+  margin-top: 1em;
+}
+.message__btn {
+  font-size: 0;
+}
+.message--center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.message--dialogs {
+  display: none;
+  max-width: 530px;
+  width: calc(100% - 40px);
+  background-color: #fff;
+  z-index: 12;
+}
+.message--dialogs .message__container {
+  position: relative;
+  padding: 50px 60px 30px;
+}
+.message--dialogs .message__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.message--dialogs .message__txt {
+  padding-bottom: 30px;
+}
+.message--dialogs .message__txt h2 {
+  padding-right: 50px;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+.message--dialogs .message__btn {
+  text-align: center;
+}
+
+.black.dialogs {
+  cursor: pointer;
+}
+
 header {
   position: fixed;
   top: 0;

@@ -7,12 +7,45 @@ $(function() {
         $('nav').addClass('opened');
         $('.black').addClass('opened nav');
     });
+    // 看更多跳message
+    $('.btn--more').click(function() {
+        var id = $(this).data('id'),
+            html = '';
+        $.get("assets/js/message.json", function(data) {
+            for (let i = 0; i < data.length; i++) {
+                if (id == data[i]['id']) {
+                    html += '';
+                    html += '<div class="message__txt"><div class="h3 font-weight-500 text-center my0">' + data[i]['title'] + '</div>';
+                    html += '<p>' + data[i]['essay'] + '<p></div>';
+                    html += '<div class="message__btn"><a href="' + data[i]['link'] + '" target="_blank" class="btn btn--contained">' + data[i]['cta'] + '</a></div>';
+                }
+            }
+            $('.message__body').html(html);
+        });
+        $('.message--dialogs').fadeIn();
+        $('body').addClass('opened');
+        $('.black').addClass('opened dialogs');
+    })
     $('.black').click(function() {
         if ($(this).hasClass("nav")) {
             $('body').removeClass('opened');
             $('nav').removeClass('opened');
             $('.black').removeClass('opened nav');
         }
+        if ($(this).hasClass("dialogs")) {
+            $('.message--dialogs').fadeOut();
+            $('body').removeClass('opened');
+            setTimeout(function() {
+                $('.black').removeClass('opened dialogs');
+            }, 100)
+        }
+    });
+    $('.message__close').click(function() {
+        $('.message--dialogs').fadeOut();
+        $('body').removeClass('opened');
+        setTimeout(function() {
+            $('.black').removeClass('opened dialogs');
+        }, 100)
     });
     if (width < 1024) {
         $('.channel__title').click(function() {
@@ -31,13 +64,12 @@ $(function() {
         });
     }
     tabNavWidth(width);
-
     $('.slider--1col').slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        prevArrow: '<div class="slider__navi slider__navi--prev"><a class="icon-btn icon-btn-center"><i class="icon icon--white icon-arrow-left"></i></a></div>',
-        nextArrow: '<div class="slider__navi slider__navi--next"><a class="icon-btn icon-btn-center"><i class="icon icon--white icon-arrow-right"></i></a></div>',
+        prevArrow: '<div class="slider__navi slider__navi--prev"><a class="icon-btn normal-status icon-btn-center"><i class="icon icon--white icon-arrow-left"></i></a></div>',
+        nextArrow: '<div class="slider__navi slider__navi--next"><a class="icon-btn normal-status icon-btn-center"><i class="icon icon--white icon-arrow-right"></i></a></div>',
         responsive: [{
             breakpoint: 1024,
             settings: {
@@ -49,8 +81,8 @@ $(function() {
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3,
-        prevArrow: '<div class="slider__navi slider__navi--prev"><a class="icon-btn icon-btn-center"><i class="icon icon--white icon-arrow-left"></i></a></div>',
-        nextArrow: '<div class="slider__navi slider__navi--next"><a class="icon-btn icon-btn-center"><i class="icon icon--white icon-arrow-right"></i></a></div>',
+        prevArrow: '<div class="slider__navi slider__navi--prev"><a class="icon-btn normal-status icon-btn-center"><i class="icon icon--white icon-arrow-left"></i></a></div>',
+        nextArrow: '<div class="slider__navi slider__navi--next"><a class="icon-btn normal-status icon-btn-center"><i class="icon icon--white icon-arrow-right"></i></a></div>',
         responsive: [{
             breakpoint: 1024,
             settings: {
@@ -67,8 +99,8 @@ $(function() {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 4,
-        prevArrow: '<div class="slider__navi slider__navi--prev"><a class="icon-btn icon-btn-center"><i class="icon icon--white icon-arrow-left"></i></a></div>',
-        nextArrow: '<div class="slider__navi slider__navi--next"><a class="icon-btn icon-btn-center"><i class="icon icon--white icon-arrow-right"></i></a></div>',
+        prevArrow: '<div class="slider__navi slider__navi--prev"><a class="icon-btn normal-status icon-btn-center"><i class="icon icon--white icon-arrow-left"></i></a></div>',
+        nextArrow: '<div class="slider__navi slider__navi--next"><a class="icon-btn normal-status icon-btn-center"><i class="icon icon--white icon-arrow-right"></i></a></div>',
         responsive: [{
             breakpoint: 1024,
             settings: {
@@ -136,10 +168,25 @@ $(function() {
             }
             $('.sales__group').html(salesperson);
         });
+        // 網址切tab
+        var string = window.location.hash,
+            hash = string.split('&tab=')[0],
+            idx = string.split('&tab=')[1];
+        if (hash !== undefined) {
+            $('html,body').animate({
+                scrollTop: $(hash).offset().top - 65 + 235
+            }, 1000);
+        }
+        if (idx !== undefined) {
+            $(hash + ' .tab .tab__nav li').removeClass('active');
+            $(hash + ' .tab .tab__nav li').eq(idx).addClass('active');
+            $(hash + ' .tab .tab__content .tab__content__pane').removeClass('active');
+            $(hash + ' .tab .tab__content .tab__content__pane').eq(idx).addClass('active');
+            $('.slider').slick("slickSetOption", "draggable", true, true);
+        }
     });
     $(window).resize(function() {
-        var width = $(window).width(),
-            headerHeight = $('header').outerHeight();
+        var width = $(window).width();
         tabNavWidth(width);
     });
 });
