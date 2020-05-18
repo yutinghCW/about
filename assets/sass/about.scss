@@ -377,12 +377,20 @@ section {
     flex-wrap: wrap;
     font-size: 0;
     .intern__item {
-        width: calc((100% - 60px) / 3);
+        width: 100%;
         padding: 20px 17px;
         font-size: 0;
         border: 1px solid $gray-100;
+        @include breakpoint(768px) {
+            width: calc((100% - 60px) / 3);
+        }
         +.intern__item {
-            margin-left: 30px;
+            @include breakpoint(768px) {
+                margin-left: 30px;
+            }
+            @include breakpoint(max-width 767px) {
+                margin-top: 20px;
+            }
         }
         h6,
         p {

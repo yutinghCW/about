@@ -3064,13 +3064,25 @@ section .slider.slider--4col .card__item {
   font-size: 0;
 }
 .intern__group .intern__item {
-  width: calc((100% - 60px) / 3);
+  width: 100%;
   padding: 20px 17px;
   font-size: 0;
   border: 1px solid #EEEEEE;
 }
-.intern__group .intern__item + .intern__item {
-  margin-left: 30px;
+@media (min-width: 768px) {
+  .intern__group .intern__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media (min-width: 768px) {
+  .intern__group .intern__item + .intern__item {
+    margin-left: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .intern__group .intern__item + .intern__item {
+    margin-top: 20px;
+  }
 }
 .intern__group .intern__item h6,
 .intern__group .intern__item p {
