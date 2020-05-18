@@ -2984,16 +2984,37 @@ section .slider.slider--4col .card__item {
 .webaccess {
   font-size: 0;
 }
-.webaccess .webaccess__item {
-  display: inline-block;
-  vertical-align: middle;
+@media (min-width: 768px) {
+  .webaccess .webaccess__item {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
-.webaccess .webaccess__item--img {
-  width: calc(100% - 490px);
+@media (max-width: 767px) {
+  .webaccess .webaccess__item--img {
+    max-width: 300px;
+    margin: 0 auto;
+  }
 }
-.webaccess .webaccess__item--txt {
-  width: 490px;
-  padding-left: 40px;
+@media (min-width: 768px) {
+  .webaccess .webaccess__item--img {
+    width: calc(100% - 490px);
+  }
+}
+@media (max-width: 767px) {
+  .webaccess .webaccess__item--txt {
+    margin-top: 10px;
+  }
+  .webaccess .webaccess__item--txt .btn--contained {
+    display: table;
+    margin: auto;
+  }
+}
+@media (min-width: 768px) {
+  .webaccess .webaccess__item--txt {
+    width: 490px;
+    padding-left: 40px;
+  }
 }
 
 .sales__group {
@@ -3083,9 +3104,17 @@ section .slider.slider--4col .card__item {
 .cwg__list .list__item .list__logo img {
   width: 120px;
 }
-.cwg__list .list__item .list__text {
-  width: calc(100% - 120px);
-  padding-left: 20px;
+@media (min-width: 768px) {
+  .cwg__list .list__item .list__text {
+    width: calc(100% - 120px);
+    padding-left: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .cwg__list .list__item .list__text {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 .cwg__list .list__item .list__text p {
   font-size: 1rem;

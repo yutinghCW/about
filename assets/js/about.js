@@ -64,6 +64,13 @@ $(function() {
         $(this).parent().siblings('.ellipsis__area--hide').slideDown();
         $(this).remove();
     });
+    $('.btn--video').click(function() {
+        $('html,body').animate({
+            scrollTop: $('#cw').offset().top - 65
+        }, 1000);
+        $('#cw--nav').val('cw-3');
+        $('#cw .tab__content').children('.tab__content__pane').removeClass('active').eq(2).addClass('active');
+    });
     // tab__nav寬度設為等分
     function tabNavWidth(width) {
         $(".tab").each(function() {
@@ -95,7 +102,7 @@ $(function() {
         responsive: [{
             breakpoint: 1024,
             settings: {
-                // infinite: false,
+                infinite: false,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: true,
@@ -113,7 +120,7 @@ $(function() {
         responsive: [{
             breakpoint: 1024,
             settings: {
-                // infinite: false,
+                infinite: false,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: true,
@@ -188,6 +195,7 @@ $(function() {
         // 網址切tab
         var string = window.location.hash,
             hash = string.split('&tab=')[0],
+            hashVal = hash.split('#')[1],
             idx = string.split('&tab=')[1] - 1;
         if (hash.length > 0) {
             $('html,body').animate({
@@ -200,6 +208,7 @@ $(function() {
             $(hash + ' .tab .tab__content .tab__content__pane').removeClass('active');
             $(hash + ' .tab .tab__content .tab__content__pane').eq(idx).addClass('active');
             $('.slider').slick("slickSetOption", "draggable", true, true);
+            $(hash + '--nav').val(hashVal + '-' + (idx + 1));
         }
     });
     $(window).resize(function() {

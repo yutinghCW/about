@@ -296,14 +296,31 @@ section {
 .webaccess {
     font-size: 0;
     .webaccess__item {
-        display: inline-block;
-        vertical-align: middle;
+        @include breakpoint(768px) {
+            display: inline-block;
+            vertical-align: middle;
+        }
         &--img {
-            width: calc(100% - 490px);
+            @include breakpoint(max-width 767px) {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            @include breakpoint(768px) {
+                width: calc(100% - 490px);
+            }
         }
         &--txt {
-            width: 490px;
-            padding-left: 40px;
+            @include breakpoint(max-width 767px) {
+                margin-top: 10px;
+                .btn--contained {
+                    display: table;
+                    margin: auto;
+                }
+            }
+            @include breakpoint(768px) {
+                width: 490px;
+                padding-left: 40px;
+            }
         }
     }
 }
@@ -406,8 +423,14 @@ section {
             }
         }
         .list__text {
-            width: calc(100% - 120px);
-            padding-left: 20px;
+            @include breakpoint(768px) {
+                width: calc(100% - 120px);
+                padding-left: 20px;
+            }
+            @include breakpoint(max-width 767px) {
+                width: 100%;
+                margin-top: 10px;
+            }
             p {
                 font-size: 1rem;
             }
