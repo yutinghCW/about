@@ -184,13 +184,25 @@ img {
 }
 
 .desktop {
-    @include breakpoint(max-width 1023px) {
+    @include breakpoint(max-width 767px) {
         display: none;
     }
 }
 
 .mobile {
-    @include breakpoint(1024px) {
+    @include breakpoint(768px) {
+        display: none;
+    }
+}
+
+.landscape {
+    @media screen and (orientation: portrait) {
+        display: none;
+    }
+}
+
+.portrait {
+    @media screen and (orientation: landscape) {
         display: none;
     }
 }

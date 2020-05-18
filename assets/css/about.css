@@ -345,14 +345,26 @@ img {
   overflow: hidden;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .desktop {
     display: none;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .mobile {
+    display: none;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .landscape {
+    display: none;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .portrait {
     display: none;
   }
 }
