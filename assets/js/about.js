@@ -122,6 +122,14 @@ $(function() {
             }
         }]
     });
+    $('.tab__select').each(function() {
+        $(this).on('change', function() {
+            var val = $(this).val(),
+                valIndex = val.split('-')[1] - 1;
+            $(this).siblings('.tab__content').children('.tab__content__pane').removeClass('active');
+            $(this).siblings('.tab__content').children('.tab__content__pane').eq(valIndex).addClass('active');
+        })
+    })
     $(window).load(function() {
         var headerHeight = $('header').outerHeight();
         $('a.scroll--smooth').click(function() {
@@ -183,7 +191,7 @@ $(function() {
             idx = string.split('&tab=')[1] - 1;
         if (hash.length > 0) {
             $('html,body').animate({
-                scrollTop: $(hash).offset().top - 65 + 235 - 1
+                scrollTop: $(hash).offset().top - 65 + 235
             }, 1000);
         }
         if ((idx !== undefined) && (idx > 0)) {
