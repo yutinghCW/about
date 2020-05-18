@@ -27,7 +27,6 @@ section {
     &.opening {
         position: relative;
         height: 100%;
-        font-size: 1.125rem;
         line-height: 1.78;
         border-top: 0;
         &::before {
@@ -59,11 +58,22 @@ section {
             z-index: 2;
         }
         h1 {
-            font-size: 44px;
+            font-size: 32px;
+            @include breakpoint(1024px) {
+                font-size: 44px;
+            }
+        }
+        .h1 {
+            @include breakpoint(max-width 1023px) {
+                font-size: 22px;
+            }
         }
         p {
-            span {
-                display: block;
+            @include breakpoint(1024px) {
+                font-size: 1.125rem;
+                span {
+                    display: block;
+                }
             }
         }
     }
@@ -87,8 +97,29 @@ section {
         p {
             line-height: 1.78;
         }
+        &.ellipsis__area--show {
+            position: relative;
+            &::after {
+                position: absolute;
+                bottom: 0;
+                @include beforeafter('', block);
+                width: 100%;
+                height: 50%;
+                background: rgb(255, 255, 255);
+                background: -moz-linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+                background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+                background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            }
+        }
+        &.ellipsis__area--hide {
+            display: none;
+        }
     }
     .lastest__group {
+        @include breakpoint(max-width 1023px) {
+            margin-left: -20px;
+            margin-right: -20px;
+        }
         li {
             font-size: 0;
             &:nth-child(odd) {
@@ -99,10 +130,13 @@ section {
             }
             a {
                 display: block;
-                padding: 10px 30px;
+                padding: 10px 20px;
                 color: $text;
                 &:hover {
                     color: $primary;
+                }
+                @include breakpoint(1024px) {
+                    padding: 10px 30px;
                 }
             }
             span {
@@ -135,8 +169,8 @@ section {
             }
         }
         &.slider--3col {
-            margin-left: -15px;
-            margin-right: -15px;
+            margin-left: -20px;
+            margin-right: -20px;
             .card__item {
                 padding-left: 15px;
                 padding-right: 15px;

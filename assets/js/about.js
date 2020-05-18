@@ -55,6 +55,15 @@ $(function() {
             $(this).parent().siblings('.channel__item').children('.channel__option').slideUp();
         })
     }
+    $('.ellipsis__area--btn1').click(function() {
+        $(this).parent().siblings('.ellipsis__area').children('p').removeClass('text-ellipsis');
+        $(this).remove();
+    });
+    $('.ellipsis__area--btn2').click(function() {
+        $(this).parent().siblings('.ellipsis__area').removeClass('ellipsis__area--show');
+        $(this).parent().siblings('.ellipsis__area--hide').slideDown();
+        $(this).remove();
+    });
     // tab__nav寬度設為等分
     function tabNavWidth(width) {
         $(".tab").each(function() {
@@ -86,7 +95,7 @@ $(function() {
         responsive: [{
             breakpoint: 1024,
             settings: {
-                infinite: false,
+                // infinite: false,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: true,
@@ -104,7 +113,7 @@ $(function() {
         responsive: [{
             breakpoint: 1024,
             settings: {
-                infinite: false,
+                // infinite: false,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: true,
@@ -171,13 +180,13 @@ $(function() {
         // 網址切tab
         var string = window.location.hash,
             hash = string.split('&tab=')[0],
-            idx = string.split('&tab=')[1];
-        if (hash !== undefined) {
+            idx = string.split('&tab=')[1] - 1;
+        if (hash.length > 0) {
             $('html,body').animate({
-                scrollTop: $(hash).offset().top - 65 + 235
+                scrollTop: $(hash).offset().top - 65 + 235 - 1
             }, 1000);
         }
-        if (idx !== undefined) {
+        if ((idx !== undefined) && (idx > 0)) {
             $(hash + ' .tab .tab__nav li').removeClass('active');
             $(hash + ' .tab .tab__nav li').eq(idx).addClass('active');
             $(hash + ' .tab .tab__content .tab__content__pane').removeClass('active');

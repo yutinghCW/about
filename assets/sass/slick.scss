@@ -1,3 +1,8 @@
+@charset "UTF-8";
+@import "Compass";
+@import "breakpoint";
+@import "_sheet";
+
 /* Slider */
 
 .slick-slider {
@@ -92,4 +97,33 @@
 
 .slick-arrow.slick-hidden {
     display: none;
+}
+
+.slick-dots {
+    margin: 30px 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+    text-align: center;
+    li {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: $gray-200;
+        @include border-radius(50%);
+        @include transition(background 0.3s);
+        +li {
+            margin-left: 10px;
+        }
+        &.slick-active {
+            background-color: $primary;
+        }
+        button {
+            padding: 0;
+            border: 0;
+            width: 0;
+            height: 0;
+            -webkit-appearance: none;
+        }
+    }
 }

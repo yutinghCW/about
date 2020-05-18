@@ -48,7 +48,8 @@
 	    </ul>
 	</nav>
     <section class="opening">
-        <img src="assets/images/opening.jpg" alt="">
+        <img class="desktop" src="assets/images/opening.jpg" alt="">
+        <img class="mobile" src="assets/images/opening-m.jpg" alt="">
         <div class="container text-center">
             <h1 class="my0">天下，不只是一本雜誌</h1>
             <div class="h1 my0">我們經營的是「信任」</div>
@@ -85,7 +86,7 @@
                 <div class="h3 my0">FEATURES</div>
             </div>
             <div class="tab">
-                <div class="tab__nav">
+                <div class="tab__nav desktop">
                     <ul class="list-reset">
                         <li class="active">
                             <span>天下觀點</span>
@@ -101,6 +102,12 @@
                         </li>
                     </ul>
                 </div>
+                <select id="features--nav" class="tab__select mobile">
+                    <option value="features-1">天下觀點</option>
+                    <option value="features-2">編輯獨立原則</option>
+                    <option value="features-3">報導原則</option>
+                    <option value="features-4">關鍵數字</option>
+                </select>
                 <div class="tab__content">
                     <div class="tab__content__pane active">
                         <div class="ellipsis__area">
@@ -136,21 +143,29 @@
                                 自1996年起， 每年製作「海闊天空」教育特刊，引導新一代的希望工程。自2001年起，七度推動「微笑319鄉+運動」，公益發行超過七百萬冊微笑護照，號召逾千人走完台灣368鄉鎮，不僅凝聚社會共識，更刺激內需產業發展。
                             </p>
                         </div>
+                        <div class="text-center pt30">
+                            <button class="btn btn--outlined ellipsis__area--btn1">展開</button>
+                        </div>
                     </div>
                     <div class="tab__content__pane">
-                        <div class="ellipsis__area">
+                        <div class="ellipsis__area ellipsis__area--show">
                             <p class="mt0">
                                 天下雜誌，是台灣第一本專業的新聞財經雜誌。每日精選財經、國際、管理、教育、經濟學人、評論、時尚；互動圖表、影音等多媒體報導，深入解讀世界脈動，掌握前瞻觀念。以積極、前瞻、放眼天下的態度，試圖為台灣在世界前進的潮流中找到定位，為企業因應政經巨變找到出路，為領導人與中產階級搭起溝通的橋樑，提供台灣和華文世界讀者獨立的新聞、觀點與資訊。
                             </p>
-                            <p>
+                            <p class="mb0">
                                 天下雜誌是一家獨立經營的媒體，以言論公正客觀，報導深入淺出的品質，陸續贏得「亞洲卓越新聞獎」(SOPA)、「金鼎獎」、「卓越新聞獎」等超過200座國際及國內大獎肯定。1981年創刊以來，《天下雜誌》堅持獨立、專業的新聞價值，建立的品牌公信力在牛津大學路透新聞學院（Reuters Institute for the Study of Journalism）的《數位媒體報告》（Digital News Report）調查中，已經連續兩年排名民營新聞媒體第一（2018, 2019）。
                             </p>
+                        </div>
+                        <div class="ellipsis__area ellipsis__area--hide">
                             <p>
                                 天下報導歡迎不同政治光譜的聲音，提供讀者多元的觀點。天下編輯部不會在政府或政黨的要求之下製作或發表內容。或許有時候天下編輯部的內容會跟某些團體的意見一致，但這不代表在替這些團體或意見背書。
                             </p>
                             <p class="mb0">
                                 天下的編輯部和業務部業務分離。整合傳播部替廣告主製作的專題內容或活動，《天下》都會清楚對讀者揭露這些內容或活動是廣編企劃或由贊助商支持。
                             </p>
+                        </div>
+                        <div class="text-center pt30">
+                            <button class="btn btn--outlined ellipsis__area--btn2">展開</button>
                         </div>
                     </div>
                     <div class="tab__content__pane">
@@ -217,7 +232,7 @@
                 <div class="h3 my0">COMMONWEALTH MAGAZINE</div>
             </div>
             <div class="tab">
-                <div class="tab__nav">
+                <div class="tab__nav desktop">
                     <ul class="list-reset">
                         <li class="active">
                             <span>數位轉型報告</span>
@@ -230,6 +245,11 @@
                         </li>
                     </ul>
                 </div>
+                <select id="cw--nav" class="tab__select mobile">
+                    <option value="cw-1">數位轉型報告</option>
+                    <option value="cw-2">核心價值</option>
+                    <option value="cw-3">兩分鐘看天下</option>
+                </select>
                 <div class="tab__content">
                     <div class="tab__content__pane active">
                         <p class="my0">
@@ -280,7 +300,7 @@
                 <div class="h3 my0">DIGITAL SERVICES</div>
             </div>
             <div class="tab">
-                <div class="tab__nav">
+                <div class="tab__nav desktop">
                     <ul class="list-reset">
                         <li class="active">
                             <span>特色頻道</span>
@@ -296,6 +316,12 @@
                         </li>
                     </ul>
                 </div>
+                <select id="digital--nav" class="tab__select mobile">
+                    <option value="digital-1">特色頻道</option>
+                    <option value="digital-2">數位專輯</option>
+                    <option value="digital-3">天下全閱讀</option>
+                    <option value="digital-4">數位產品</option>
+                </select>
                 <div class="tab__content">
                     <div class="tab__content__pane active">
                         <div class="slider slider--3col">
@@ -421,7 +447,7 @@
                     <div class="tab__content__pane">
                         <div class="slider slider--3col">
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <a href="https://topic.cw.com.tw/cwapp/applink/cwapp.html?source=aboutus" target="_blank" rel="noopener noreferrer" class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/4-4-1.png" alt="天下雜誌 APP">
                                     </span>
@@ -431,7 +457,7 @@
                                 <button class="btn btn--100 btn--outlined btn--small btn--more" data-id="cwapp">看更多</button>
                             </div>
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <a href="https://www.cw.com.tw/cwdaily?from=aboutus" target="_blank" rel="noopener noreferrer" class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/4-4-2.png" alt="天下每日報 APP">
                                     </span>
@@ -441,7 +467,7 @@
                                 <button class="btn btn--100 btn--outlined btn--small btn--more" data-id="dailyapp">看更多</button>
                             </div>
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <a href="https://www.leadercampus.com.tw/" target="_blank" rel="noopener noreferrer" class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/4-4-3.png" alt="天下創新學院">
                                     </span>
@@ -463,7 +489,7 @@
                 <div class="h3 my0">MAGAZINES</div>
             </div>
             <div class="tab">
-                <div class="tab__nav">
+                <div class="tab__nav desktop">
                     <ul class="list-reset">
                         <li class="active">
                             <span>天下雜誌</span>
@@ -476,6 +502,11 @@
                         </li>
                     </ul>
                 </div>
+                <select id="magazines--nav" class="tab__select mobile">
+                    <option value="magazines-1">天下雜誌</option>
+                    <option value="magazines-2">換日線</option>
+                    <option value="magazines-3">微笑台灣</option>
+                </select>
                 <div class="tab__content">
                     <div class="tab__content__pane active">
                         <h6 class="my0">《天下雜誌》與特刊：華文世界最優質的財經雜誌</h6>
@@ -484,74 +515,74 @@
                         </p>
                         <div class="slider slider--4col my30">
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <div class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/5-1-1.jpg" alt="">
                                     </span>
-                                </a>
+                                </div>
                             </div>
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <div class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/5-1-2.jpg" alt="">
                                     </span>
-                                </a>
+                                </div>
                             </div>
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <div class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/5-1-3.jpg" alt="">
                                     </span>
-                                </a>
+                                </div>
                             </div>
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <div class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/5-1-4.jpg" alt="">
                                     </span>
-                                </a>
+                                </div>
                             </div>
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <div class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/5-1-5.jpg" alt="">
                                     </span>
-                                </a>
+                                </div>
                             </div>
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <div class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/5-1-6.jpg" alt="">
                                     </span>
-                                </a>
+                                </div>
                             </div>
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <div class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/5-1-7.jpg" alt="">
                                     </span>
-                                </a>
+                                </div>
                             </div>
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <div class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/5-1-8.jpg" alt="">
                                     </span>
-                                </a>
+                                </div>
                             </div>
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <div class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/5-1-9.jpg" alt="">
                                     </span>
-                                </a>
+                                </div>
                             </div>
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <div class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/5-1-10.jpg" alt="">
                                     </span>
-                                </a>
+                                </div>
                             </div>
                         </div>
                         <div class="text-center">
@@ -565,32 +596,32 @@
                         </p>
                         <div class="slider slider--4col my30">
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <div class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/5-2-1.jpg" alt="">
                                     </span>
-                                </a>
+                                </div>
                             </div>
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <div class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/5-2-2.jpg" alt="">
                                     </span>
-                                </a>
+                                </div>
                             </div>
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <div class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/5-2-3.jpg" alt="">
                                     </span>
-                                </a>
+                                </div>
                             </div>
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <div class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/5-2-4.jpg" alt="">
                                     </span>
-                                </a>
+                                </div>
                             </div>
                         </div>
                         <div class="text-center">
@@ -604,32 +635,32 @@
                         </p>
                         <div class="slider slider--4col my30">
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <div class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/5-3-1.jpg" alt="">
                                     </span>
-                                </a>
+                                </div>
                             </div>
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <div class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/5-3-2.jpg" alt="">
                                     </span>
-                                </a>
+                                </div>
                             </div>
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <div class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/5-3-3.jpg" alt="">
                                     </span>
-                                </a>
+                                </div>
                             </div>
                             <div class="card__item">
-                                <a href="" target="_blank" rel="noopener noreferrer" class="card__link">
+                                <div class="card__link">
                                     <span class="card__img">
                                         <img src="assets/images/5-3-4.jpg" alt="">
                                     </span>
-                                </a>
+                                </div>
                             </div>
                         </div>
                         <div class="text-center">
@@ -647,7 +678,7 @@
                 <div class="h3 my0">PUBLISHING</div>
             </div>
             <div class="tab">
-                <div class="tab__nav">
+                <div class="tab__nav desktop">
                     <ul class="list-reset">
                         <li class="active">
                             <span>使命介紹</span>
@@ -660,6 +691,11 @@
                         </li>
                     </ul>
                 </div>
+                <select id="publishing--nav" class="tab__select mobile">
+                    <option value="publishing-1">使命介紹</option>
+                    <option value="publishing-2">經典書籍</option>
+                    <option value="publishing-3">社群活動</option>
+                </select>
                 <div class="tab__content">
                     <div class="tab__content__pane active">
                         <h6 class="my0">For Better Ideas and Practicing 閱讀，讓改變看得見</h6>
@@ -792,13 +828,13 @@
                 <div class="h3 my0">FORUMS & EVENT</div>
             </div>
             <div class="tab">
-                <div class="tab__nav">
+                <div class="tab__nav desktop">
                     <ul class="list-reset">
                         <li class="active">
                             <span>天下經濟論壇</span>
                         </li>
                         <li>
-                            <span>CSR頒獎典禮</span>
+                            <span>CSR 頒獎典禮</span>
                         </li>
                         <li>
                             <span>週年慶倡議主題</span>
@@ -808,6 +844,12 @@
                         </li>
                     </ul>
                 </div>
+                <select id="event--nav" class="tab__select mobile">
+                    <option value="event-1">天下經濟論壇</option>
+                    <option value="event-2">CSR 頒獎典禮</option>
+                    <option value="event-3">週年慶倡議主題</option>
+                    <option value="event-3">國際大師論壇</option>
+                </select>
                 <div class="tab__content">
                     <div class="tab__content__pane active">
                         <p class="my0">
@@ -946,7 +988,7 @@
                 <div class="h3 my0">ADVERTISING SERVICES</div>
             </div>
             <div class="tab">
-                <div class="tab__nav">
+                <div class="tab__nav desktop">
                     <ul class="list-reset">
                         <li class="active">
                             <span>服務項目</span>
@@ -959,6 +1001,11 @@
                         </li>
                     </ul>
                 </div>
+                <select id="advertising--nav" class="tab__select mobile">
+                    <option value="advertising-1">服務項目</option>
+                    <option value="advertising-2">合作案例</option>
+                    <option value="advertising-3">合作洽詢</option>
+                </select>
                 <div class="tab__content">
                     <div class="tab__content__pane active">
                         <div class="list__area">
@@ -1064,11 +1111,6 @@
                                     <img src="assets/images/8-2-10.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="card__item">
-                                <div class="card__img">
-                                    <img src="assets/images/8-2-11.jpg" alt="">
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="tab__content__pane">
@@ -1088,7 +1130,7 @@
                 <div class="h3 my0">CW CAREERS AND TALENTS</div>
             </div>
             <div class="tab">
-                <div class="tab__nav">
+                <div class="tab__nav desktop">
                     <ul class="list-reset">
                         <li class="active">
                             <span>工作機會</span>
@@ -1098,6 +1140,10 @@
                         </li>
                     </ul>
                 </div>
+                <select id="recruit--nav" class="tab__select mobile">
+                    <option value="recruit-1">工作機會</option>
+                    <option value="recruit-2">實習生計畫</option>
+                </select>
                 <div class="tab__content">
                     <div class="tab__content__pane active">
                         <img src="assets/images/9-1.png" alt="" style="max-width: 300px; width: 100%; margin: 0 auto;">
@@ -1105,7 +1151,7 @@
                             天下雜誌於 2018 年更領先業界推出數位轉型報告,提供數位內容付費與廣告等的做法與方向，期望華文媒體業有更好的發展，也期待找到更多有志一同的未來的高度潛力人才。
                         </p>
                         <div class="text-center">
-                            <a href="https://www.104.com.tw/company/a4hvxa0" target="_blank" rel="noopener noreferrer" class="btn btn--contained">Media Kit 下載</a>
+                            <a href="https://www.104.com.tw/company/a4hvxa0" target="_blank" rel="noopener noreferrer" class="btn btn--contained">工作機會</a>
                         </div>
                     </div>
                     <div class="tab__content__pane">

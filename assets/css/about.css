@@ -2287,6 +2287,25 @@ a:focus {
     padding-right: 50px;
   }
 }
+.tab .tab__select {
+  width: 100%;
+  padding: 11px 15px;
+  font-size: 1.125rem;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border-color: #D3D5D7;
+  background-color: #EEEEEE;
+  background-image: url("../images/common/down.svg");
+  -moz-background-size: 0.875rem;
+  -o-background-size: 0.875rem;
+  -webkit-background-size: 0.875rem;
+  background-size: 0.875rem;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 15px) center;
+  -webkit-appearance: none;
+  outline: 0;
+}
 .tab .tab__content__pane {
   display: none;
   padding-top: 30px;
@@ -2665,7 +2684,6 @@ section {
 section.opening {
   position: relative;
   height: 100%;
-  font-size: 1.125rem;
   line-height: 1.78;
   border-top: 0;
 }
@@ -2703,10 +2721,25 @@ section.opening .container {
   z-index: 2;
 }
 section.opening h1 {
-  font-size: 44px;
+  font-size: 32px;
 }
-section.opening p span {
-  display: block;
+@media (min-width: 1024px) {
+  section.opening h1 {
+    font-size: 44px;
+  }
+}
+@media (max-width: 1023px) {
+  section.opening .h1 {
+    font-size: 22px;
+  }
+}
+@media (min-width: 1024px) {
+  section.opening p {
+    font-size: 1.125rem;
+  }
+  section.opening p span {
+    display: block;
+  }
 }
 section .title {
   margin-bottom: 30px;
@@ -2727,6 +2760,30 @@ section p {
 section .ellipsis__area p {
   line-height: 1.78;
 }
+section .ellipsis__area.ellipsis__area--show {
+  position: relative;
+}
+section .ellipsis__area.ellipsis__area--show::after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50%;
+  background: white;
+  background: -moz-linear-gradient(0deg, white 0%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-linear-gradient(0deg, white 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(0deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+section .ellipsis__area.ellipsis__area--hide {
+  display: none;
+}
+@media (max-width: 1023px) {
+  section .lastest__group {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
 section .lastest__group li {
   font-size: 0;
 }
@@ -2738,11 +2795,16 @@ section .lastest__group li:nth-child(even) {
 }
 section .lastest__group li a {
   display: block;
-  padding: 10px 30px;
+  padding: 10px 20px;
   color: #171717;
 }
 section .lastest__group li a:hover {
   color: #D60C18;
+}
+@media (min-width: 1024px) {
+  section .lastest__group li a {
+    padding: 10px 30px;
+  }
 }
 section .lastest__group li span {
   display: inline-block;
@@ -2776,8 +2838,8 @@ section .slider .slider__navi--next {
   right: -100px;
 }
 section .slider.slider--3col {
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 section .slider.slider--3col .card__item {
   padding-left: 15px;
