@@ -168,6 +168,174 @@ section {
                 right: -100px;
             }
         }
+        &.slider--chart {
+            background-color: $gray;
+            .slick-slide {
+                position: relative;
+                .mask {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0%;
+                    height: 100%;
+                    overflow: hidden;
+                    .revenue__chart {
+                        width: auto;
+                        height: 100%;
+                    }
+                }
+            }
+            svg {
+                display: block;
+            }
+            .fm__chart {
+                .xaxis__text {
+                    font-size: 1rem;
+                }
+                .yaxis__text {
+                    font-size: 1.125rem;
+                }
+                .yaxis__text--cw {
+                    fill: $primary;
+                }
+                .source {
+                    font-size: 0.875rem;
+                }
+                .yaxis__line,
+                .yaxis__line--baseline,
+                .chart__line,
+                .chart__line--cw {
+                    fill: none;
+                }
+                .yaxis__line {
+                    stroke: $gray-100;
+                    stroke-dasharray: 4;
+                }
+                .yaxis__line,
+                .yaxis__line--baseline {
+                    stroke-linecap: square;
+                }
+                .yaxis__line--baseline {
+                    stroke: $black;
+                }
+                .chart__line {
+                    stroke: $gray-200;
+                    stroke-width: 2px;
+                }
+                .chart__line--cw {
+                    stroke: $primary;
+                    stroke-dashoffset: 800;
+                    stroke-dasharray: 800;
+                }
+            }
+            .revenue__chart {
+                .yaxis__line--baseline,
+                .yaxis__line,
+                .chart__line {
+                    fill: none;
+                }
+                .yaxis__line--baseline {
+                    stroke: $black;
+                }
+                .yaxis__line--baseline,
+                .yaxis__line,
+                .chart__line {
+                    stroke-linecap: square;
+                }
+                .yaxis__line {
+                    stroke: $gray-100;
+                    stroke-dasharray: 4;
+                }
+                .chart__line {
+                    stroke: $primary;
+                    stroke-width: 2px;
+                }
+                .chart__line--dashed {
+                    stroke-dasharray: 7;
+                }
+                .mask {
+                    width: 0;
+                    overflow: hidden;
+                }
+            }
+            .credibility__chart {
+                .bar__bg {
+                    fill: $gray-100;
+                }
+                .bar__color {
+                    fill: $gray-200;
+                    width: 0;
+                }
+                .bar__media {
+                    font-size: 1.125rem;
+                }
+                .bar__media--cw,
+                .bar__color--cw {
+                    fill: $primary;
+                }
+                .bar__val {
+                    font-size: 0.875rem;
+                    @include opacity(0);
+                }
+                .bar__val--cw {
+                    fill: $white;
+                }
+            }
+            .slick-active {
+                .fm__chart {
+                    .chart__line--cw {
+                        @include animation(fm__chart--cw 1s 500ms 1 linear alternate forwards);
+                    }
+                }
+                .mask {
+                    @include animation(revenue__chart-mask 1s 500ms 1 linear alternate forwards);
+                }
+                .credibility__chart {
+                    .bar__color {
+                        @include animation(500ms 500ms 1 linear alternate forwards);
+                    }
+                    .bar__color--125 {
+                        @include animation-name(bar__color--125);
+                    }
+                    .bar__color--122 {
+                        @include animation-name(bar__color--122);
+                    }
+                    .bar__color--119 {
+                        @include animation-name(bar__color--119);
+                    }
+                    .bar__color--116 {
+                        @include animation-name(bar__color--116);
+                    }
+                    .bar__color--111 {
+                        @include animation-name(bar__color--111);
+                    }
+                    .bar__color--110 {
+                        @include animation-name(bar__color--110);
+                    }
+                    .bar__color--108 {
+                        @include animation-name(bar__color--108);
+                    }
+                    .bar__color--107 {
+                        @include animation-name(bar__color--107);
+                    }
+                    .bar__color--105 {
+                        @include animation-name(bar__color--105);
+                    }
+                    .bar__color--102 {
+                        @include animation-name(bar__color--102);
+                    }
+                    .bar__color--99 {
+                        @include animation-name(bar__color--99);
+                    }
+                    .bar__color--94 {
+                        @include animation-name(bar__color--94);
+                    }
+                    .bar__val {
+                        @include animation(opacity 500ms 1000ms 1 linear alternate forwards);
+                    }
+                }
+            }
+        }
         &.slider--3col {
             margin-left: -20px;
             margin-right: -20px;
@@ -184,6 +352,141 @@ section {
                 padding-right: 12px;
             }
         }
+    }
+}
+
+@include keyframes(fm__chart--cw) {
+    0% {
+        stroke-dashoffset: 800;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@include keyframes(revenue__chart-mask) {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@include keyframes(opacity) {
+    0% {
+        @include opacity(0);
+    }
+    100% {
+        @include opacity(1);
+    }
+}
+
+@include keyframes(bar__color--125) {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 125px;
+    }
+}
+
+@include keyframes(bar__color--122) {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 122px;
+    }
+}
+
+@include keyframes(bar__color--119) {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 119px;
+    }
+}
+
+@include keyframes(bar__color--116) {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 116px;
+    }
+}
+
+@include keyframes(bar__color--111) {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 111px;
+    }
+}
+
+@include keyframes(bar__color--110) {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 110px;
+    }
+}
+
+@include keyframes(bar__color--108) {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 108px;
+    }
+}
+
+@include keyframes(bar__color--107) {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 107px;
+    }
+}
+
+@include keyframes(bar__color--105) {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 105px;
+    }
+}
+
+@include keyframes(bar__color--102) {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 102px;
+    }
+}
+
+@include keyframes(bar__color--99) {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 99px;
+    }
+}
+
+@include keyframes(bar__color--94) {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 94px;
     }
 }
 

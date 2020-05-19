@@ -2849,6 +2849,195 @@ section .slider .slider__navi--prev {
 section .slider .slider__navi--next {
   right: -100px;
 }
+section .slider.slider--chart {
+  background-color: #fafafa;
+}
+section .slider.slider--chart .slick-slide {
+  position: relative;
+}
+section .slider.slider--chart .slick-slide .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  overflow: hidden;
+}
+section .slider.slider--chart .slick-slide .mask .revenue__chart {
+  width: auto;
+  height: 100%;
+}
+section .slider.slider--chart svg {
+  display: block;
+}
+section .slider.slider--chart .fm__chart .xaxis__text {
+  font-size: 1rem;
+}
+section .slider.slider--chart .fm__chart .yaxis__text {
+  font-size: 1.125rem;
+}
+section .slider.slider--chart .fm__chart .yaxis__text--cw {
+  fill: #D60C18;
+}
+section .slider.slider--chart .fm__chart .source {
+  font-size: 0.875rem;
+}
+section .slider.slider--chart .fm__chart .yaxis__line,
+section .slider.slider--chart .fm__chart .yaxis__line--baseline,
+section .slider.slider--chart .fm__chart .chart__line,
+section .slider.slider--chart .fm__chart .chart__line--cw {
+  fill: none;
+}
+section .slider.slider--chart .fm__chart .yaxis__line {
+  stroke: #EEEEEE;
+  stroke-dasharray: 4;
+}
+section .slider.slider--chart .fm__chart .yaxis__line,
+section .slider.slider--chart .fm__chart .yaxis__line--baseline {
+  stroke-linecap: square;
+}
+section .slider.slider--chart .fm__chart .yaxis__line--baseline {
+  stroke: #171717;
+}
+section .slider.slider--chart .fm__chart .chart__line {
+  stroke: #D3D5D7;
+  stroke-width: 2px;
+}
+section .slider.slider--chart .fm__chart .chart__line--cw {
+  stroke: #D60C18;
+  stroke-dashoffset: 800;
+  stroke-dasharray: 800;
+}
+section .slider.slider--chart .revenue__chart .yaxis__line--baseline,
+section .slider.slider--chart .revenue__chart .yaxis__line,
+section .slider.slider--chart .revenue__chart .chart__line {
+  fill: none;
+}
+section .slider.slider--chart .revenue__chart .yaxis__line--baseline {
+  stroke: #171717;
+}
+section .slider.slider--chart .revenue__chart .yaxis__line--baseline,
+section .slider.slider--chart .revenue__chart .yaxis__line,
+section .slider.slider--chart .revenue__chart .chart__line {
+  stroke-linecap: square;
+}
+section .slider.slider--chart .revenue__chart .yaxis__line {
+  stroke: #EEEEEE;
+  stroke-dasharray: 4;
+}
+section .slider.slider--chart .revenue__chart .chart__line {
+  stroke: #D60C18;
+  stroke-width: 2px;
+}
+section .slider.slider--chart .revenue__chart .chart__line--dashed {
+  stroke-dasharray: 7;
+}
+section .slider.slider--chart .revenue__chart .mask {
+  width: 0;
+  overflow: hidden;
+}
+section .slider.slider--chart .credibility__chart .bar__bg {
+  fill: #EEEEEE;
+}
+section .slider.slider--chart .credibility__chart .bar__color {
+  fill: #D3D5D7;
+  width: 0;
+}
+section .slider.slider--chart .credibility__chart .bar__media {
+  font-size: 1.125rem;
+}
+section .slider.slider--chart .credibility__chart .bar__media--cw,
+section .slider.slider--chart .credibility__chart .bar__color--cw {
+  fill: #D60C18;
+}
+section .slider.slider--chart .credibility__chart .bar__val {
+  font-size: 0.875rem;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+section .slider.slider--chart .credibility__chart .bar__val--cw {
+  fill: #fff;
+}
+section .slider.slider--chart .slick-active .fm__chart .chart__line--cw {
+  -moz-animation: fm__chart--cw 1s 500ms 1 linear alternate forwards;
+  -webkit-animation: fm__chart--cw 1s 500ms 1 linear alternate forwards;
+  animation: fm__chart--cw 1s 500ms 1 linear alternate forwards;
+}
+section .slider.slider--chart .slick-active .mask {
+  -moz-animation: revenue__chart-mask 1s 500ms 1 linear alternate forwards;
+  -webkit-animation: revenue__chart-mask 1s 500ms 1 linear alternate forwards;
+  animation: revenue__chart-mask 1s 500ms 1 linear alternate forwards;
+}
+section .slider.slider--chart .slick-active .credibility__chart .bar__color {
+  -moz-animation: 500ms 500ms 1 linear alternate forwards;
+  -webkit-animation: 500ms 500ms 1 linear alternate forwards;
+  animation: 500ms 500ms 1 linear alternate forwards;
+}
+section .slider.slider--chart .slick-active .credibility__chart .bar__color--125 {
+  -moz-animation-name: bar__color--125;
+  -webkit-animation-name: bar__color--125;
+  animation-name: bar__color--125;
+}
+section .slider.slider--chart .slick-active .credibility__chart .bar__color--122 {
+  -moz-animation-name: bar__color--122;
+  -webkit-animation-name: bar__color--122;
+  animation-name: bar__color--122;
+}
+section .slider.slider--chart .slick-active .credibility__chart .bar__color--119 {
+  -moz-animation-name: bar__color--119;
+  -webkit-animation-name: bar__color--119;
+  animation-name: bar__color--119;
+}
+section .slider.slider--chart .slick-active .credibility__chart .bar__color--116 {
+  -moz-animation-name: bar__color--116;
+  -webkit-animation-name: bar__color--116;
+  animation-name: bar__color--116;
+}
+section .slider.slider--chart .slick-active .credibility__chart .bar__color--111 {
+  -moz-animation-name: bar__color--111;
+  -webkit-animation-name: bar__color--111;
+  animation-name: bar__color--111;
+}
+section .slider.slider--chart .slick-active .credibility__chart .bar__color--110 {
+  -moz-animation-name: bar__color--110;
+  -webkit-animation-name: bar__color--110;
+  animation-name: bar__color--110;
+}
+section .slider.slider--chart .slick-active .credibility__chart .bar__color--108 {
+  -moz-animation-name: bar__color--108;
+  -webkit-animation-name: bar__color--108;
+  animation-name: bar__color--108;
+}
+section .slider.slider--chart .slick-active .credibility__chart .bar__color--107 {
+  -moz-animation-name: bar__color--107;
+  -webkit-animation-name: bar__color--107;
+  animation-name: bar__color--107;
+}
+section .slider.slider--chart .slick-active .credibility__chart .bar__color--105 {
+  -moz-animation-name: bar__color--105;
+  -webkit-animation-name: bar__color--105;
+  animation-name: bar__color--105;
+}
+section .slider.slider--chart .slick-active .credibility__chart .bar__color--102 {
+  -moz-animation-name: bar__color--102;
+  -webkit-animation-name: bar__color--102;
+  animation-name: bar__color--102;
+}
+section .slider.slider--chart .slick-active .credibility__chart .bar__color--99 {
+  -moz-animation-name: bar__color--99;
+  -webkit-animation-name: bar__color--99;
+  animation-name: bar__color--99;
+}
+section .slider.slider--chart .slick-active .credibility__chart .bar__color--94 {
+  -moz-animation-name: bar__color--94;
+  -webkit-animation-name: bar__color--94;
+  animation-name: bar__color--94;
+}
+section .slider.slider--chart .slick-active .credibility__chart .bar__val {
+  -moz-animation: opacity 500ms 1000ms 1 linear alternate forwards;
+  -webkit-animation: opacity 500ms 1000ms 1 linear alternate forwards;
+  animation: opacity 500ms 1000ms 1 linear alternate forwards;
+}
 section .slider.slider--3col {
   margin-left: -20px;
   margin-right: -20px;
@@ -2866,6 +3055,366 @@ section .slider.slider--4col .card__item {
   padding-right: 12px;
 }
 
+@-moz-keyframes fm__chart--cw {
+  0% {
+    stroke-dashoffset: 800;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes fm__chart--cw {
+  0% {
+    stroke-dashoffset: 800;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fm__chart--cw {
+  0% {
+    stroke-dashoffset: 800;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes revenue__chart-mask {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes revenue__chart-mask {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes revenue__chart-mask {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-moz-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes bar__color--125 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 125px;
+  }
+}
+@-webkit-keyframes bar__color--125 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 125px;
+  }
+}
+@keyframes bar__color--125 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 125px;
+  }
+}
+@-moz-keyframes bar__color--122 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 122px;
+  }
+}
+@-webkit-keyframes bar__color--122 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 122px;
+  }
+}
+@keyframes bar__color--122 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 122px;
+  }
+}
+@-moz-keyframes bar__color--119 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 119px;
+  }
+}
+@-webkit-keyframes bar__color--119 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 119px;
+  }
+}
+@keyframes bar__color--119 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 119px;
+  }
+}
+@-moz-keyframes bar__color--116 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 116px;
+  }
+}
+@-webkit-keyframes bar__color--116 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 116px;
+  }
+}
+@keyframes bar__color--116 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 116px;
+  }
+}
+@-moz-keyframes bar__color--111 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 111px;
+  }
+}
+@-webkit-keyframes bar__color--111 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 111px;
+  }
+}
+@keyframes bar__color--111 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 111px;
+  }
+}
+@-moz-keyframes bar__color--110 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 110px;
+  }
+}
+@-webkit-keyframes bar__color--110 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 110px;
+  }
+}
+@keyframes bar__color--110 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 110px;
+  }
+}
+@-moz-keyframes bar__color--108 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 108px;
+  }
+}
+@-webkit-keyframes bar__color--108 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 108px;
+  }
+}
+@keyframes bar__color--108 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 108px;
+  }
+}
+@-moz-keyframes bar__color--107 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 107px;
+  }
+}
+@-webkit-keyframes bar__color--107 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 107px;
+  }
+}
+@keyframes bar__color--107 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 107px;
+  }
+}
+@-moz-keyframes bar__color--105 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 105px;
+  }
+}
+@-webkit-keyframes bar__color--105 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 105px;
+  }
+}
+@keyframes bar__color--105 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 105px;
+  }
+}
+@-moz-keyframes bar__color--102 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 102px;
+  }
+}
+@-webkit-keyframes bar__color--102 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 102px;
+  }
+}
+@keyframes bar__color--102 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 102px;
+  }
+}
+@-moz-keyframes bar__color--99 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 99px;
+  }
+}
+@-webkit-keyframes bar__color--99 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 99px;
+  }
+}
+@keyframes bar__color--99 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 99px;
+  }
+}
+@-moz-keyframes bar__color--94 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 94px;
+  }
+}
+@-webkit-keyframes bar__color--94 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 94px;
+  }
+}
+@keyframes bar__color--94 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 94px;
+  }
+}
 .embed__responsive {
   position: relative;
   display: block;
