@@ -169,9 +169,9 @@ section {
             }
         }
         &.slider--chart {
-            background-color: $gray;
             .slick-slide {
                 position: relative;
+                background-color: $gray;
                 .mask {
                     position: absolute;
                     top: 0;
@@ -281,6 +281,44 @@ section {
                     fill: $white;
                 }
             }
+            .view__chart {
+                .view {
+                    fill: $gray-200;
+                }
+                .view--cw {
+                    fill: $gray-200;
+                }
+            }
+            .school__chart {
+                .country__text {
+                    font-size: 1rem;
+                }
+                .country {
+                    stroke: $white;
+                    stroke-width: 2px;
+                    fill-rule: evenodd;
+                }
+                .country__text.country__text--cw {
+                    fill: $primary;
+                }
+                .country.country--south {
+                    fill: #f4ae6a;
+                }
+                .country.country--central {
+                    fill: #37a1d8;
+                }
+                .country.country--north {
+                    fill: #85c698;
+                }
+                .country.country--east {
+                    fill: #ec796a;
+                }
+                .line--gray {
+                    fill: none;
+                    stroke: $secondary;
+                    stroke-linecap: square;
+                }
+            }
             .slick-active {
                 .fm__chart {
                     .chart__line--cw {
@@ -331,10 +369,28 @@ section {
                         @include animation-name(bar__color--94);
                     }
                     .bar__val {
-                        @include animation(opacity 500ms 1000ms 1 linear alternate forwards);
+                        @include animation(opacity 200ms 1000ms 1 linear alternate forwards);
+                    }
+                }
+                .view__chart {
+                    .view--g1 {
+                        @include animation(view__chart 500ms 500ms 1 linear alternate forwards);
+                    }
+                    .view--g2 {
+                        @include animation(view__chart 500ms 700ms 1 linear alternate forwards);
+                    }
+                    .view--g3 {
+                        @include animation(view__chart 500ms 900ms 1 linear alternate forwards);
+                    }
+                    .view--g4 {
+                        @include animation(view__chart 500ms 1100ms 1 linear alternate forwards);
                     }
                 }
             }
+        }
+        &.slider--1col {
+            margin-left: -20px;
+            margin-right: -20px;
         }
         &.slider--3col {
             margin-left: -20px;
@@ -370,6 +426,15 @@ section {
     }
     100% {
         width: 100%;
+    }
+}
+
+@include keyframes(view__chart) {
+    0% {
+        fill: $gray-200;
+    }
+    100% {
+        fill: $primary;
     }
 }
 
@@ -668,11 +733,16 @@ section {
 }
 
 .img--left {
-    float: left;
-    margin-right: 30px;
-    margin-bottom: 10px;
-    width: auto;
-    height: 195px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    @include breakpoint(660px) {
+        float: left;
+        margin-right: 30px;
+        margin-bottom: 10px;
+        width: auto;
+        height: 195px;
+    }
 }
 
 .intern__group {
@@ -741,6 +811,9 @@ section {
             @include breakpoint(max-width 767px) {
                 width: 100%;
                 margin-top: 10px;
+            }
+            h6 {
+                line-height: 1.2;
             }
             p {
                 font-size: 1rem;

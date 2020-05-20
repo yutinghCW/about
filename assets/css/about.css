@@ -2380,7 +2380,12 @@ body.message__open {
 }
 .message--dialogs .message__container {
   position: relative;
-  padding: 50px 60px 30px;
+  padding: 60px 30px 30px;
+}
+@media (min-width: 768px) {
+  .message--dialogs .message__container {
+    padding: 50px 60px 30px;
+  }
 }
 .message--dialogs .message__close {
   position: absolute;
@@ -2392,6 +2397,9 @@ body.message__open {
 }
 .message--dialogs .message__txt {
   padding-bottom: 30px;
+}
+.message--dialogs .message__txt .h3 {
+  line-height: 1.5;
 }
 .message--dialogs .message__txt h2 {
   padding-right: 50px;
@@ -2849,11 +2857,9 @@ section .slider .slider__navi--prev {
 section .slider .slider__navi--next {
   right: -100px;
 }
-section .slider.slider--chart {
-  background-color: #fafafa;
-}
 section .slider.slider--chart .slick-slide {
   position: relative;
+  background-color: #fafafa;
 }
 section .slider.slider--chart .slick-slide .mask {
   position: absolute;
@@ -2958,6 +2964,40 @@ section .slider.slider--chart .credibility__chart .bar__val {
 section .slider.slider--chart .credibility__chart .bar__val--cw {
   fill: #fff;
 }
+section .slider.slider--chart .view__chart .view {
+  fill: #D3D5D7;
+}
+section .slider.slider--chart .view__chart .view--cw {
+  fill: #D3D5D7;
+}
+section .slider.slider--chart .school__chart .country__text {
+  font-size: 1rem;
+}
+section .slider.slider--chart .school__chart .country {
+  stroke: #fff;
+  stroke-width: 2px;
+  fill-rule: evenodd;
+}
+section .slider.slider--chart .school__chart .country__text.country__text--cw {
+  fill: #D60C18;
+}
+section .slider.slider--chart .school__chart .country.country--south {
+  fill: #f4ae6a;
+}
+section .slider.slider--chart .school__chart .country.country--central {
+  fill: #37a1d8;
+}
+section .slider.slider--chart .school__chart .country.country--north {
+  fill: #85c698;
+}
+section .slider.slider--chart .school__chart .country.country--east {
+  fill: #ec796a;
+}
+section .slider.slider--chart .school__chart .line--gray {
+  fill: none;
+  stroke: #939EA7;
+  stroke-linecap: square;
+}
 section .slider.slider--chart .slick-active .fm__chart .chart__line--cw {
   -moz-animation: fm__chart--cw 1s 500ms 1 linear alternate forwards;
   -webkit-animation: fm__chart--cw 1s 500ms 1 linear alternate forwards;
@@ -3034,9 +3074,33 @@ section .slider.slider--chart .slick-active .credibility__chart .bar__color--94 
   animation-name: bar__color--94;
 }
 section .slider.slider--chart .slick-active .credibility__chart .bar__val {
-  -moz-animation: opacity 500ms 1000ms 1 linear alternate forwards;
-  -webkit-animation: opacity 500ms 1000ms 1 linear alternate forwards;
-  animation: opacity 500ms 1000ms 1 linear alternate forwards;
+  -moz-animation: opacity 200ms 1000ms 1 linear alternate forwards;
+  -webkit-animation: opacity 200ms 1000ms 1 linear alternate forwards;
+  animation: opacity 200ms 1000ms 1 linear alternate forwards;
+}
+section .slider.slider--chart .slick-active .view__chart .view--g1 {
+  -moz-animation: view__chart 500ms 500ms 1 linear alternate forwards;
+  -webkit-animation: view__chart 500ms 500ms 1 linear alternate forwards;
+  animation: view__chart 500ms 500ms 1 linear alternate forwards;
+}
+section .slider.slider--chart .slick-active .view__chart .view--g2 {
+  -moz-animation: view__chart 500ms 700ms 1 linear alternate forwards;
+  -webkit-animation: view__chart 500ms 700ms 1 linear alternate forwards;
+  animation: view__chart 500ms 700ms 1 linear alternate forwards;
+}
+section .slider.slider--chart .slick-active .view__chart .view--g3 {
+  -moz-animation: view__chart 500ms 900ms 1 linear alternate forwards;
+  -webkit-animation: view__chart 500ms 900ms 1 linear alternate forwards;
+  animation: view__chart 500ms 900ms 1 linear alternate forwards;
+}
+section .slider.slider--chart .slick-active .view__chart .view--g4 {
+  -moz-animation: view__chart 500ms 1100ms 1 linear alternate forwards;
+  -webkit-animation: view__chart 500ms 1100ms 1 linear alternate forwards;
+  animation: view__chart 500ms 1100ms 1 linear alternate forwards;
+}
+section .slider.slider--1col {
+  margin-left: -20px;
+  margin-right: -20px;
 }
 section .slider.slider--3col {
   margin-left: -20px;
@@ -3101,6 +3165,30 @@ section .slider.slider--4col .card__item {
   }
   100% {
     width: 100%;
+  }
+}
+@-moz-keyframes view__chart {
+  0% {
+    fill: #D3D5D7;
+  }
+  100% {
+    fill: #D60C18;
+  }
+}
+@-webkit-keyframes view__chart {
+  0% {
+    fill: #D3D5D7;
+  }
+  100% {
+    fill: #D60C18;
+  }
+}
+@keyframes view__chart {
+  0% {
+    fill: #D3D5D7;
+  }
+  100% {
+    fill: #D60C18;
   }
 }
 @-moz-keyframes opacity {
@@ -3600,11 +3688,18 @@ section .slider.slider--4col .card__item {
 }
 
 .img--left {
-  float: left;
-  margin-right: 30px;
-  margin-bottom: 10px;
-  width: auto;
-  height: 195px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 660px) {
+  .img--left {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    width: auto;
+    height: 195px;
+  }
 }
 
 .intern__group {
@@ -3676,6 +3771,9 @@ section .slider.slider--4col .card__item {
     width: 100%;
     margin-top: 10px;
   }
+}
+.cwg__list .list__item .list__text h6 {
+  line-height: 1.2;
 }
 .cwg__list .list__item .list__text p {
   font-size: 1rem;

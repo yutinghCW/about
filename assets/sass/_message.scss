@@ -28,7 +28,10 @@ body.message__open {
         .message {
             &__container {
                 position: relative;
-                padding: 50px 60px 30px;
+                padding: 60px 30px 30px;
+                @include breakpoint(768px) {
+                    padding: 50px 60px 30px;
+                }
             }
             &__close {
                 position: absolute;
@@ -40,6 +43,9 @@ body.message__open {
             }
             &__txt {
                 padding-bottom: 30px;
+                .h3 {
+                    line-height: 1.5;
+                }
                 h2 {
                     padding-right: 50px;
                     margin-top: 0;

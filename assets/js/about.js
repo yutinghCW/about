@@ -89,6 +89,7 @@ $(function() {
         responsive: [{
             breakpoint: 1024,
             settings: {
+                dots: true,
                 arrows: false
             }
         }]
@@ -101,6 +102,16 @@ $(function() {
         nextArrow: '<div class="slider__navi slider__navi--next"><a class="icon-btn normal-status icon-btn-center"><i class="icon icon--white icon-arrow-right"></i></a></div>',
         responsive: [{
             breakpoint: 1024,
+            settings: {
+                infinite: false,
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                dots: true,
+                centerMode: true,
+                arrows: false
+            }
+        }, {
+            breakpoint: 768,
             settings: {
                 infinite: false,
                 slidesToShow: 1,
@@ -121,6 +132,16 @@ $(function() {
             breakpoint: 1024,
             settings: {
                 infinite: false,
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                dots: true,
+                centerMode: true,
+                arrows: false
+            }
+        }, {
+            breakpoint: 768,
+            settings: {
+                infinite: false,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: true,
@@ -135,6 +156,7 @@ $(function() {
                 valIndex = val.split('-')[1] - 1;
             $(this).siblings('.tab__content').children('.tab__content__pane').removeClass('active');
             $(this).siblings('.tab__content').children('.tab__content__pane').eq(valIndex).addClass('active');
+            $('.slider').slick("slickSetOption", "draggable", true, true);
         })
     })
     $(window).load(function() {
