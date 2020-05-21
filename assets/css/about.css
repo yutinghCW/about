@@ -2387,10 +2387,12 @@ body.message__open {
 .message--dialogs .message__wrap {
   display: flex;
   align-items: center;
+  justify-content: center;
   min-height: calc(100% - 40px);
 }
 .message--dialogs .message__container {
   position: relative;
+  max-width: 530px;
   padding: 60px 30px 30px;
   background-color: #fff;
 }
@@ -2708,16 +2710,11 @@ footer .cwgroup__copyright .copyright span {
 }
 
 section {
-  padding-top: 125px;
+  padding-top: 60px;
   padding-bottom: 60px;
   font-size: 1.125rem;
   background-color: #fff;
   border-top: 1px solid #EEEEEE;
-}
-@media (min-width: 1024px) {
-  section {
-    padding-top: 60px;
-  }
 }
 @media (max-width: 1023px) {
   section {
@@ -2727,9 +2724,15 @@ section {
 }
 section.opening {
   position: relative;
+  padding-top: 125px;
   min-height: 100%;
   line-height: 1.78;
   border-top: 0;
+}
+@media (min-width: 1024px) {
+  section.opening {
+    padding-top: 60px;
+  }
 }
 section.opening::before {
   content: "";
@@ -3032,6 +3035,8 @@ section .slider.slider--chart .school__chart .country {
 }
 section .slider.slider--chart .school__chart .country__text.country__text--cw {
   fill: #D60C18;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
 }
 section .slider.slider--chart .school__chart .country.country--south {
   fill: #f4ae6a;
@@ -3149,6 +3154,11 @@ section .slider.slider--chart .slick-active .view__chart .view--g4 {
   -moz-animation: view__chart 500ms 1100ms 1 linear alternate forwards;
   -webkit-animation: view__chart 500ms 1100ms 1 linear alternate forwards;
   animation: view__chart 500ms 1100ms 1 linear alternate forwards;
+}
+section .slider.slider--chart .slick-active .school__chart .country__text.country__text--cw {
+  -moz-animation: opacity 500ms 500ms 1 linear alternate forwards;
+  -webkit-animation: opacity 500ms 500ms 1 linear alternate forwards;
+  animation: opacity 500ms 500ms 1 linear alternate forwards;
 }
 section .slider.slider--1col {
   margin-left: -20px;
@@ -3642,7 +3652,7 @@ section .slider.slider--4col .card__item {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
-.card__item .card__link:hover .card__title {
+.card__item a.card__link:hover .card__title {
   color: #D60C18;
 }
 .card__item .card__img {

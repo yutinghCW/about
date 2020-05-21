@@ -107,6 +107,7 @@ $(function() {
             breakpoint: 1024,
             settings: {
                 infinite: false,
+                initialSlide: 1,
                 slidesToShow: 2,
                 slidesToScroll: 2,
                 dots: true,
@@ -135,6 +136,7 @@ $(function() {
             breakpoint: 1024,
             settings: {
                 infinite: false,
+                initialSlide: 1,
                 slidesToShow: 2,
                 slidesToScroll: 2,
                 dots: true,
@@ -164,6 +166,7 @@ $(function() {
     })
     $(window).load(function() {
         var headerHeight = $('header').outerHeight();
+        $('.slider').slick("slickSetOption", "draggable", true, true);
         $('a.scroll--smooth').click(function() {
             if (window.location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && window.location.hostname == this.hostname) {
                 var target = $(this.hash);

@@ -78,6 +78,7 @@
 .slick-initialized .slick-slide {
   display: block;
   outline: 0;
+  padding-bottom: 1px;
 }
 .slick-loading .slick-slide {
   visibility: hidden;

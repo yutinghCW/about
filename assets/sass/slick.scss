@@ -84,6 +84,7 @@
     .slick-initialized & {
         display: block;
         outline: 0;
+        padding-bottom: 1px;
     }
     .slick-loading & {
         visibility: hidden;

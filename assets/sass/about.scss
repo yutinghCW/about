@@ -19,23 +19,24 @@
 @import "_footer";
 @import "_container";
 section {
-    padding-top: 125px;
+    padding-top: 60px;
     padding-bottom: 60px;
     font-size: 1.125rem;
     background-color: $white;
     border-top: 1px solid $gray-100;
-    @include breakpoint(1024px) {
-        padding-top: 60px;
-    }
     @include breakpoint(max-width 1023px) {
         display: flex;
         align-items: center;
     }
     &.opening {
         position: relative;
+        padding-top: 125px;
         min-height: 100%;
         line-height: 1.78;
         border-top: 0;
+        @include breakpoint(1024px) {
+            padding-top: 60px;
+        }
         &::before {
             @include beforeafter('', block);
             position: absolute;
@@ -327,6 +328,7 @@ section {
                 }
                 .country__text.country__text--cw {
                     fill: $primary;
+                    @include opacity(0);
                 }
                 .country.country--south {
                     fill: #f4ae6a;
@@ -411,6 +413,11 @@ section {
                     }
                     .view--g4 {
                         @include animation(view__chart 500ms 1100ms 1 linear alternate forwards);
+                    }
+                }
+                .school__chart {
+                    .country__text.country__text--cw {
+                        @include animation(opacity 500ms 500ms 1 linear alternate forwards);
                     }
                 }
             }
@@ -658,9 +665,9 @@ section {
             font-size: 1rem;
             @include lineclamp(3);
         }
-        &:hover .card__title {
-            color: $primary;
-        }
+    }
+    a.card__link:hover .card__title {
+        color: $primary;
     }
     .card__img {
         position: relative;
