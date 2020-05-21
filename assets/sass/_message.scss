@@ -21,14 +21,26 @@ body.message__open {
     }
     &--dialogs {
         display: none;
-        max-width: 530px;
-        width: calc(100% - 40px);
-        background-color: $white;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        align-items: center;
+        overflow-x: hidden;
+        overflow-y: auto;
         z-index: 12;
         .message {
+            &__wrap {
+                display: flex;
+                align-items: center;
+                min-height: calc(100% - 40px);
+            }
             &__container {
                 position: relative;
                 padding: 60px 30px 30px;
+                background-color: $white;
                 @include breakpoint(768px) {
                     padding: 50px 60px 30px;
                 }

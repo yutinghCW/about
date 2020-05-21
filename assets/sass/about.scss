@@ -19,14 +19,21 @@
 @import "_footer";
 @import "_container";
 section {
-    padding-top: 60px;
+    padding-top: 125px;
     padding-bottom: 60px;
     font-size: 1.125rem;
     background-color: $white;
     border-top: 1px solid $gray-100;
+    @include breakpoint(1024px) {
+        padding-top: 60px;
+    }
+    @include breakpoint(max-width 1023px) {
+        display: flex;
+        align-items: center;
+    }
     &.opening {
         position: relative;
-        height: 100%;
+        min-height: 100%;
         line-height: 1.78;
         border-top: 0;
         &::before {
@@ -49,18 +56,25 @@ section {
             object-fit: cover;
         }
         .container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
+            position: relative;
             width: 100%;
             color: $white;
-            @include translate(-50%, -50%);
             z-index: 2;
+            @include breakpoint(1024px) {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include translate(-50%, -50%);
+            }
         }
         h1 {
             font-size: 32px;
+            line-height: 1.5;
             @include breakpoint(1024px) {
                 font-size: 44px;
+            }
+            span {
+                display: inline-block;
             }
         }
         .h1 {
@@ -140,15 +154,28 @@ section {
                 }
             }
             span {
-                display: inline-block;
+                display: block;
                 vertical-align: middle;
                 font-size: 1.125rem;
+                @include breakpoint(1024px) {
+                    display: inline-block;
+                }
                 &:first-child {
                     width: 6em;
+                    @include breakpoint(max-width 1023px) {
+                        margin-bottom: 5px;
+                    }
                 }
                 &:last-child {
-                    width: calc(100% - 6em);
                     @include ellipsis;
+                    @include breakpoint(1024px) {
+                        width: calc(100% - 6em);
+                    }
+                }
+                &.loading {
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 0;
                 }
             }
         }
@@ -696,37 +723,50 @@ section {
 .sales__group {
     font-size: 0;
     .sales__item {
-        display: inline-block;
-        vertical-align: text-top;
+        @include breakpoint(1024px) {
+            display: inline-block;
+            vertical-align: text-top;
+        }
         .sales__img img {
             margin: auto;
+        }
+        @include breakpoint(max-width 1023px) {
+            +.sales__item {
+                margin-top: 30px;
+            }
         }
     }
     &.sales__group--2col {
         .sales__item {
-            width: 260px;
-            +.sales__item {
-                margin-left: 80px;
+            @include breakpoint(1024px) {
+                width: 260px;
+                +.sales__item {
+                    margin-left: 80px;
+                }
             }
         }
     }
     &.sales__group--3col {
         .sales__item {
-            width: calc((100% - 60px) / 3);
-            +.sales__item {
-                margin-left: 30px;
+            @include breakpoint(1024px) {
+                width: calc((100% - 60px) / 3);
+                +.sales__item {
+                    margin-left: 30px;
+                }
             }
         }
     }
     &.sales__group--4col {
         .sales__item {
-            width: 260px;
-            margin-left: 80px;
-            &:nth-child(2n+1) {
-                margin-left: 0;
-            }
-            &:nth-child(n+3) {
-                margin-top: 30px;
+            @include breakpoint(1024px) {
+                width: 260px;
+                margin-left: 80px;
+                &:nth-child(2n+1) {
+                    margin-left: 0;
+                }
+                &:nth-child(n+3) {
+                    margin-top: 30px;
+                }
             }
         }
     }
