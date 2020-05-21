@@ -3629,6 +3629,9 @@ section .slider.slider--4col .card__item {
   padding-left: 20px;
 }
 
+.card__item .card__link {
+  display: block;
+}
 .card__item .card__link > span {
   display: block;
   color: #171717;

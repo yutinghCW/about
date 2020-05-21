@@ -651,6 +651,7 @@ section {
 
 .card__item {
     .card__link {
+        display: block;
         >span {
             display: block;
             color: $text;
