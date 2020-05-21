@@ -663,11 +663,13 @@ section {
             font-size: 1.125rem;
             font-weight: 500;
             @include lineclamp(2);
+            visibility: visible;
         }
         .card__essay {
             min-height: 3em;
             font-size: 1rem;
             @include lineclamp(3);
+            visibility: visible;
         }
     }
     a.card__link:hover .card__title {

@@ -3649,6 +3649,7 @@ section .slider.slider--4col .card__item {
   overflow: hidden;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  visibility: visible;
 }
 .card__item .card__link .card__essay {
   min-height: 3em;
@@ -3657,6 +3658,7 @@ section .slider.slider--4col .card__item {
   overflow: hidden;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  visibility: visible;
 }
 .card__item a.card__link:hover .card__title {
   color: #D60C18;
