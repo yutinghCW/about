@@ -54,7 +54,7 @@ nav {
         @include translateY(-50%);
     }
     @include breakpoint(1200px) {
-        right: calc((100% - 1150px) / 2);
+        right: calc((100% - 1100px) / 2);
     }
     @include breakpoint(max-width 1023px) {
         top: 0 !important;
