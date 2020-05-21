@@ -2914,7 +2914,6 @@ section .slider .slider__navi--next {
 }
 section .slider.slider--chart .slick-slide {
   position: relative;
-  background-color: #fafafa;
 }
 section .slider.slider--chart .slick-slide .mask {
   position: absolute;
@@ -2930,6 +2929,10 @@ section .slider.slider--chart .slick-slide .mask .revenue__chart {
 }
 section .slider.slider--chart svg {
   display: block;
+}
+section .slider.slider--chart .card__chart {
+  position: relative;
+  background-color: #fafafa;
 }
 section .slider.slider--chart .fm__chart .xaxis__text {
   font-size: 1rem;

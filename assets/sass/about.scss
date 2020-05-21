@@ -199,7 +199,6 @@ section {
         &.slider--chart {
             .slick-slide {
                 position: relative;
-                background-color: $gray;
                 .mask {
                     position: absolute;
                     top: 0;
@@ -215,6 +214,10 @@ section {
             }
             svg {
                 display: block;
+            }
+            .card__chart {
+                position: relative;
+                background-color: $gray;
             }
             .fm__chart {
                 .xaxis__text {
