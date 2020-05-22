@@ -11,17 +11,15 @@ $(function() {
     $('.btn--more').click(function() {
         var id = $(this).data('id'),
             html = '';
-        $.get("assets/js/message.json", function(data) {
-            for (let i = 0; i < data.length; i++) {
-                if (id == data[i]['id']) {
-                    html += '';
-                    html += '<div class="message__txt"><div class="h3 font-weight-500 text-center my0">' + data[i]['title'] + '</div>';
-                    html += '<p>' + data[i]['essay'] + '<p></div>';
-                    html += '<div class="message__btn"><a href="' + data[i]['link'] + '" target="_blank" class="btn btn--contained">' + data[i]['cta'] + '</a></div>';
-                }
+        for (let i = 0; i < data.length; i++) {
+            if (id == data[i]['id']) {
+                html += '';
+                html += '<div class="message__txt"><div class="h3 font-weight-500 text-center my0">' + data[i]['title'] + '</div>';
+                html += '<p>' + data[i]['essay'] + '<p></div>';
+                html += '<div class="message__btn"><a href="' + data[i]['link'] + '" target="_blank" class="btn btn--contained">' + data[i]['cta'] + '</a></div>';
             }
-            $('.message__body').html(html);
-        });
+        }
+        $('.message__body').html(html);
         $('.message--dialogs').fadeIn();
         $('body').addClass('opened');
         $('.black').addClass('opened dialogs');
