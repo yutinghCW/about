@@ -131,6 +131,7 @@ section {
         }
     }
     .lastest__group {
+        position: relative;
         @include breakpoint(max-width 1023px) {
             margin-left: -20px;
             margin-right: -20px;
@@ -177,7 +178,49 @@ section {
                     display: block;
                     width: 100%;
                     margin-bottom: 0;
+                    @include opacity(0);
                 }
+            }
+        }
+    }
+    .loader {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        &__animate {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include translate(-50%, -50%);
+            &--triggle {
+                position: static;
+                @include translate(0, 0);
+            }
+        }
+        .loader__icon {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            margin: auto;
+            &::before,
+            &::after {
+                @include beforeafter('', block);
+                position: absolute;
+                top: 15px;
+                width: 25px;
+                height: 25px;
+                @include border-radius(50%);
+            }
+            &::before {
+                background: linear-gradient(90deg, $surface, darken($surface, 5%));
+                @include animation(rotation1 1s linear infinite);
+            }
+            &::after {
+                background: linear-gradient(90deg, $primary, $primary-variant);
+                @include animation(rotation2 1s linear infinite);
             }
         }
     }
@@ -624,6 +667,25 @@ section {
     }
     100% {
         width: 94px;
+    }
+}
+
+@include keyframes(rotation1) {
+    from {
+        left: 5px;
+        z-index: 1;
+    }
+    to {
+        left: 25px;
+    }
+}
+
+@include keyframes(rotation2) {
+    from {
+        right: 5px;
+    }
+    to {
+        right: 25px;
     }
 }
 

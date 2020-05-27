@@ -2834,6 +2834,9 @@ section .ellipsis__area.ellipsis__area--show::after {
 section .ellipsis__area.ellipsis__area--hide {
   display: none;
 }
+section .lastest__group {
+  position: relative;
+}
 @media (max-width: 1023px) {
   section .lastest__group {
     margin-left: -20px;
@@ -2894,6 +2897,61 @@ section .lastest__group li span.loading {
   display: block;
   width: 100%;
   margin-bottom: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+section .loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+section .loader__animate {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+section .loader__animate--triggle {
+  position: static;
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+section .loader .loader__icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+section .loader .loader__icon::before, section .loader .loader__icon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 15px;
+  width: 25px;
+  height: 25px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+section .loader .loader__icon::before {
+  background: linear-gradient(90deg, #003a9f, #003186);
+  -moz-animation: rotation1 1s linear infinite;
+  -webkit-animation: rotation1 1s linear infinite;
+  animation: rotation1 1s linear infinite;
+}
+section .loader .loader__icon::after {
+  background: linear-gradient(90deg, #d60c18, #9d0505);
+  -moz-animation: rotation2 1s linear infinite;
+  -webkit-animation: rotation2 1s linear infinite;
+  animation: rotation2 1s linear infinite;
 }
 @media (max-width: 1023px) {
   section .slider {
@@ -3601,6 +3659,57 @@ section .slider.slider--4col .card__item {
   }
   100% {
     width: 94px;
+  }
+}
+@-moz-keyframes rotation1 {
+  from {
+    left: 5px;
+    z-index: 1;
+  }
+  to {
+    left: 25px;
+  }
+}
+@-webkit-keyframes rotation1 {
+  from {
+    left: 5px;
+    z-index: 1;
+  }
+  to {
+    left: 25px;
+  }
+}
+@keyframes rotation1 {
+  from {
+    left: 5px;
+    z-index: 1;
+  }
+  to {
+    left: 25px;
+  }
+}
+@-moz-keyframes rotation2 {
+  from {
+    right: 5px;
+  }
+  to {
+    right: 25px;
+  }
+}
+@-webkit-keyframes rotation2 {
+  from {
+    right: 5px;
+  }
+  to {
+    right: 25px;
+  }
+}
+@keyframes rotation2 {
+  from {
+    right: 5px;
+  }
+  to {
+    right: 25px;
   }
 }
 .embed__responsive {
