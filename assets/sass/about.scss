@@ -182,18 +182,41 @@ section {
         }
     }
     .slider {
+        @include breakpoint(max-width 1023px) {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
         .slider__navi {
             position: absolute;
             top: 50%;
             @include translateY(-50%);
+            @include breakpoint(max-width 1023px) {
+                height: 100%;
+            }
             .icon-btn {
-                font-size: 2rem;
+                @include breakpoint(1024px) {
+                    font-size: 2rem;
+                }
+                @include breakpoint(max-width 1023px) {
+                    font-size: 1.5rem;
+                    height: 100%;
+                }
             }
             &--prev {
-                left: -100px;
+                @include breakpoint(1024px) {
+                    left: -100px;
+                }
+                @include breakpoint(max-width 1023px) {
+                    left: -40px;
+                }
             }
             &--next {
-                right: -100px;
+                @include breakpoint(1024px) {
+                    right: -100px;
+                }
+                @include breakpoint(max-width 1023px) {
+                    right: -40px;
+                }
             }
         }
         &.slider--chart {
@@ -214,6 +237,18 @@ section {
             }
             svg {
                 display: block;
+                @include breakpoint(max-width 767px) {
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    &.desktop {
+                        display: none;
+                    }
+                }
+                &.mobile {
+                    @include breakpoint(768px) {
+                        display: none;
+                    }
+                }
             }
             .card__chart {
                 position: relative;
@@ -426,20 +461,20 @@ section {
             }
         }
         &.slider--1col {
-            margin-left: -20px;
-            margin-right: -20px;
+            // margin-left: -20px;
+            // margin-right: -20px;
         }
         &.slider--3col {
-            margin-left: -20px;
-            margin-right: -20px;
+            // margin-left: -20px;
+            // margin-right: -20px;
             .card__item {
                 padding-left: 15px;
                 padding-right: 15px;
             }
         }
         &.slider--4col {
-            margin-left: -12px;
-            margin-right: -12px;
+            // margin-left: -12px;
+            // margin-right: -12px;
             .card__item {
                 padding-left: 12px;
                 padding-right: 12px;

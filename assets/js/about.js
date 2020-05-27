@@ -91,7 +91,8 @@ $(function() {
             breakpoint: 1024,
             settings: {
                 dots: true,
-                arrows: false
+                prevArrow: '<div class="slider__navi slider__navi--prev"><a class="icon-btn normal-status icon-btn-center"><i class="icon icon--white icon-arrow-left"></i></a></div>',
+                nextArrow: '<div class="slider__navi slider__navi--next"><a class="icon-btn normal-status icon-btn-center"><i class="icon icon--white icon-arrow-right"></i></a></div>'
             }
         }]
     });
@@ -104,23 +105,20 @@ $(function() {
         responsive: [{
             breakpoint: 1024,
             settings: {
-                infinite: false,
-                initialSlide: 1,
                 slidesToShow: 2,
                 slidesToScroll: 2,
                 dots: true,
-                centerMode: true,
-                arrows: false
+                prevArrow: '<div class="slider__navi slider__navi--prev"><a class="icon-btn normal-status icon-btn-center"><i class="icon icon--white icon-arrow-left"></i></a></div>',
+                nextArrow: '<div class="slider__navi slider__navi--next"><a class="icon-btn normal-status icon-btn-center"><i class="icon icon--white icon-arrow-right"></i></a></div>'
             }
         }, {
             breakpoint: 768,
             settings: {
-                infinite: false,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: true,
-                centerMode: true,
-                arrows: false
+                prevArrow: '<div class="slider__navi slider__navi--prev"><a class="icon-btn normal-status icon-btn-center"><i class="icon icon--white icon-arrow-left"></i></a></div>',
+                nextArrow: '<div class="slider__navi slider__navi--next"><a class="icon-btn normal-status icon-btn-center"><i class="icon icon--white icon-arrow-right"></i></a></div>'
             }
         }]
     });
@@ -133,23 +131,20 @@ $(function() {
         responsive: [{
             breakpoint: 1024,
             settings: {
-                infinite: false,
-                initialSlide: 1,
                 slidesToShow: 2,
                 slidesToScroll: 2,
                 dots: true,
-                centerMode: true,
-                arrows: false
+                prevArrow: '<div class="slider__navi slider__navi--prev"><a class="icon-btn normal-status icon-btn-center"><i class="icon icon--white icon-arrow-left"></i></a></div>',
+                nextArrow: '<div class="slider__navi slider__navi--next"><a class="icon-btn normal-status icon-btn-center"><i class="icon icon--white icon-arrow-right"></i></a></div>'
             }
         }, {
             breakpoint: 768,
             settings: {
-                infinite: false,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: true,
-                centerMode: true,
-                arrows: false
+                prevArrow: '<div class="slider__navi slider__navi--prev"><a class="icon-btn normal-status icon-btn-center"><i class="icon icon--white icon-arrow-left"></i></a></div>',
+                nextArrow: '<div class="slider__navi slider__navi--next"><a class="icon-btn normal-status icon-btn-center"><i class="icon icon--white icon-arrow-right"></i></a></div>'
             }
         }]
     });
@@ -161,6 +156,13 @@ $(function() {
             $(this).siblings('.tab__content').children('.tab__content__pane').eq(valIndex).addClass('active');
             $('.slider').slick("slickSetOption", "draggable", true, true);
         })
+    })
+    $('nav ul li a').click(function() {
+        if (width < 1024) {
+            $('body').removeClass('opened');
+            $('nav').removeClass('opened');
+            $('.black').removeClass('opened nav');
+        }
     })
     $(window).load(function() {
         var headerHeight = $('header').outerHeight();

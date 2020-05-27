@@ -2895,6 +2895,12 @@ section .lastest__group li span.loading {
   width: 100%;
   margin-bottom: 0;
 }
+@media (max-width: 1023px) {
+  section .slider {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
 section .slider .slider__navi {
   position: absolute;
   top: 50%;
@@ -2903,14 +2909,41 @@ section .slider .slider__navi {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-section .slider .slider__navi .icon-btn {
-  font-size: 2rem;
+@media (max-width: 1023px) {
+  section .slider .slider__navi {
+    height: 100%;
+  }
 }
-section .slider .slider__navi--prev {
-  left: -100px;
+@media (min-width: 1024px) {
+  section .slider .slider__navi .icon-btn {
+    font-size: 2rem;
+  }
 }
-section .slider .slider__navi--next {
-  right: -100px;
+@media (max-width: 1023px) {
+  section .slider .slider__navi .icon-btn {
+    font-size: 1.5rem;
+    height: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  section .slider .slider__navi--prev {
+    left: -100px;
+  }
+}
+@media (max-width: 1023px) {
+  section .slider .slider__navi--prev {
+    left: -40px;
+  }
+}
+@media (min-width: 1024px) {
+  section .slider .slider__navi--next {
+    right: -100px;
+  }
+}
+@media (max-width: 1023px) {
+  section .slider .slider__navi--next {
+    right: -40px;
+  }
 }
 section .slider.slider--chart .slick-slide {
   position: relative;
@@ -2929,6 +2962,20 @@ section .slider.slider--chart .slick-slide .mask .revenue__chart {
 }
 section .slider.slider--chart svg {
   display: block;
+}
+@media (max-width: 767px) {
+  section .slider.slider--chart svg {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  section .slider.slider--chart svg.desktop {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  section .slider.slider--chart svg.mobile {
+    display: none;
+  }
 }
 section .slider.slider--chart .card__chart {
   position: relative;
@@ -3163,21 +3210,9 @@ section .slider.slider--chart .slick-active .school__chart .country__text.countr
   -webkit-animation: opacity 500ms 500ms 1 linear alternate forwards;
   animation: opacity 500ms 500ms 1 linear alternate forwards;
 }
-section .slider.slider--1col {
-  margin-left: -20px;
-  margin-right: -20px;
-}
-section .slider.slider--3col {
-  margin-left: -20px;
-  margin-right: -20px;
-}
 section .slider.slider--3col .card__item {
   padding-left: 15px;
   padding-right: 15px;
-}
-section .slider.slider--4col {
-  margin-left: -12px;
-  margin-right: -12px;
 }
 section .slider.slider--4col .card__item {
   padding-left: 12px;
